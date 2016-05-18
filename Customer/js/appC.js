@@ -1,4 +1,14 @@
-	var data = new Firebase("https://te-papa-cafe.firebaseio.com/");
+  var config = {
+    apiKey: "AIzaSyCsBdznl52KPtIWox0HFQjsKcytKc3qAG8",
+    authDomain: "te-papa-cafe.firebaseapp.com",
+    databaseURL: "https://te-papa-cafe.firebaseio.com",
+    storageBucket: "",
+  };
+  firebase.initializeApp(config);
+
+  var data = firebase.database().ref();
+
+
 
 
 	data.on("value", function(snapshot) {
@@ -35,5 +45,4 @@
 	console.log(coffee);
 	data.child("coffees").push(coffee);
 	});
-
 

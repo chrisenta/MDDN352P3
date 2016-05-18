@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/main.css" rel="stylesheet" media="all">
     <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
-    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.0.0/firebase.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
 </head>
@@ -30,15 +30,27 @@
         <p>Payment: {{payment}}</p>
         <p><p>Collection Type: {{collection}}</p></p>
         
+
+    {{#conditions}}
+        {{#next condition1}}
+
         <button onClick="making(this)" class="coffeeMake" data-key="{{@key}}">Making</button>
 
+        {{/next}}
+    
+        {{#next condition2}}
+
         <button onClick="readyPickup(this)" class="coffeeDone" data-key="{{@key}}">Ready for Pickup</button><p>
-        
+
+        {{/next}}
+
         <button onClick="readyDelivery(this)" class="coffeeDone" data-key="{{@key}}">Ready to be Delivered</button><p>
 
         <button onClick="complete(this)" class="coffeeComplete" data-key="{{@key}}">Completed</button>
         
         <hr>
+ 
+ {{/conditions}}
 
         </div>
 

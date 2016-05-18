@@ -1,4 +1,16 @@
-	var data = new Firebase("https://te-papa-cafe.firebaseio.com/");
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCsBdznl52KPtIWox0HFQjsKcytKc3qAG8",
+    authDomain: "te-papa-cafe.firebaseapp.com",
+    databaseURL: "https://te-papa-cafe.firebaseio.com",
+    storageBucket: "",
+  };
+  firebase.initializeApp(config);
+
+  var data = firebase.database().ref();
+
+
+
 
 
 	data.on("value", function(snapshot) {
@@ -27,7 +39,6 @@ function making(element){
 	});
 }
 
-
 function readyPickup(element){
 	var id = element.getAttribute('data-key');
 	data.child('coffees/' + id).update({
@@ -42,7 +53,20 @@ function readyDelivery(element){
 	});
 }
 
+Handlebars.registerHelper('conditions', function (options) {
+    var data = this;
+    data.__check_conditions = true;
+    return options.fn(this);
+});
 
 
+Handlebars.registerHelper('next', function(conditional, options) {
+  if(conditional && this.__check_conditions) {
+      this.__check_conditions = false;
+      return options.fn(this);
+  } else {
+      return options.inverse(this);
+  }
+});
 
 
