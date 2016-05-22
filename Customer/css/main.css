@@ -83,18 +83,18 @@ input[type=button] {
     background-size:contain;
     background-repeat:no-repeat;
     display:inline-block;
-    width:120px;height:90px;
+    width:150px;height:150px;
     -webkit-transition: all 100ms ease-in;
        -moz-transition: all 100ms ease-in;
             transition: all 100ms ease-in;
-    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
-       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
-            filter: brightness(1.8) grayscale(1) opacity(.7);
+    -webkit-filter: opacity(.5);
+       -moz-filter: opacity(.5);
+            filter: opacity(.5);
 }
 .radio-img:hover{
-    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
-       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
-            filter: brightness(1.2) grayscale(.5) opacity(.9);
+    -webkit-filter: brightness(1) opacity(.9);
+       -moz-filter: brightness(1) opacity(.9);
+            filter: brightness(1) opacity(.9);
 }
 
 a:visited{color:#888}
