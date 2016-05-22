@@ -31,40 +31,35 @@
         <p><p>Collection Type: {{collection}}</p></p>
         
 
-    {{#conditions}}
-        {{#next condition1}}
+        {{#if_eq status 'Waiting in Line'}}
+            <button onClick="making(this)" class="coffeeMake" data-key="{{@key}}">Making</button>
+        {{else}}
+        {{/if_eq}}
 
-        <button onClick="making(this)" class="coffeeMake" data-key="{{@key}}">Making</button>
-
-        {{/next}}
+        {{#if_eq status 'Making'}}
+            <button onClick="readyPickup(this)" class="coffeeDone" data-key="{{@key}}">Ready for Pickup</button><p>
     
-        {{#next condition2}}
+            <button onClick="readyDelivery(this)" class="coffeeDone" data-key="{{@key}}">Ready to be Delivered</button><p>
+        {{else}}
+        {{/if_eq}}
 
-        <button onClick="readyPickup(this)" class="coffeeDone" data-key="{{@key}}">Ready for Pickup</button><p>
+        {{#if_eq status 'Ready for Pickup'}}
+            <button onClick="complete(this)" class="coffeeComplete" data-key="{{@key}}">Completed</button>
+        {{else}}
+        {{/if_eq}}
 
-        {{/next}}
+          {{#if_eq status 'On its way!'}}
+            <button onClick="complete(this)" class="coffeeComplete" data-key="{{@key}}">Completed</button>
+        {{else}}
+        {{/if_eq}}
 
-        <button onClick="readyDelivery(this)" class="coffeeDone" data-key="{{@key}}">Ready to be Delivered</button><p>
-
-        <button onClick="complete(this)" class="coffeeComplete" data-key="{{@key}}">Completed</button>
-        
         <hr>
- 
- {{/conditions}}
 
         </div>
 
         {{/each}}
     </div>
 </script>
-
-<!-- <div>
-  <button class="result">Making</button>
-  <button class="result">Completed</button>
-  <button class="result">Delivered</button>
-</div>
-<input id="result-box" type="text" value="In Progress">
-  -->
 
 <script src="js/appB.js"></script>
 </body>

@@ -1,3 +1,4 @@
+ // Initialize Firebase
   var config = {
     apiKey: "AIzaSyCsBdznl52KPtIWox0HFQjsKcytKc3qAG8",
     authDomain: "te-papa-cafe.firebaseapp.com",
@@ -7,9 +8,6 @@
   firebase.initializeApp(config);
 
   var data = firebase.database().ref();
-
-
-
 
 	data.on("value", function(snapshot) {
 		var context = snapshot.val();
