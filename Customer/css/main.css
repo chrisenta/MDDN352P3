@@ -1,5 +1,5 @@
 body{
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	line-height: 2em;
 	text-align: center;
 }
@@ -20,7 +20,7 @@ input[type="radio"] {
 }
 
 input[type=button] {
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	letter-spacing: 2px;
 	color: #fff;
 	padding: 10px 25px; 
@@ -40,6 +40,9 @@ input[type=button] {
        -moz-appearance:none;
             appearance:none;
 }
+
+.orangejuice{background-image:url(../images/orangejuice.png);}
+.cranberryjuice{background-image:url(../images/cranberryjuice.png);}
 
 .small{background-image:url(../images/small.png);}
 .regular{background-image:url(../images/regular.png);}
