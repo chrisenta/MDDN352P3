@@ -15,12 +15,9 @@ div {
 	margin: 40px auto;
 }
 
-input[type="radio"] {
-    display: none;
-}
-
-input[type=button] {
+button {
 	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
 	letter-spacing: 2px;
 	color: #fff;
 	padding: 10px 25px; 

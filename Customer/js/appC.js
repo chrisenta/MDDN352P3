@@ -25,6 +25,7 @@ $("#submit").click(function(){
 	var coffee = {
 	size: null,
 	caffeine: null,
+	type: null,
 	shots: null,
 	sugar: null,
 	payment: null,
@@ -34,6 +35,7 @@ $("#submit").click(function(){
 
 coffee.size = $('input:radio[name=size]:checked').val();
 coffee.caffeine = $('input:radio[name=caffeine]:checked').val();
+coffee.type = $('input:checkbox[name=type]:checked').val();
 coffee.shots = $('input:radio[name=shots]:checked').val();
 coffee.sugar = $('input:radio[name=sugar]:checked').val();
 coffee.payment = $('input:radio[name=cc]:checked').val();

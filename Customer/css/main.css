@@ -1,4 +1,4 @@
-body{
+body {
 	font-family: 'Roboto', sans-serif;
 	line-height: 2em;
 	text-align: center;
@@ -15,7 +15,24 @@ div {
 	margin: 40px auto;
 }
 
+a:visited {
+    color:#888
+}
+
+a {
+    color:#444;
+    text-decoration:none;
+}
+
+p {
+    margin-bottom:.3em;
+}
+
 input[type="radio"] {
+    display: none;
+}
+
+input[type="checkbox"] {
     display: none;
 }
 
@@ -34,11 +51,41 @@ input[type=button] {
 
 /* Adapted from http://jsfiddle.net/La8wQ/10/ */
 
-.radio-selector input{
+.radio-selector input, {
     margin:0;padding:0;
     -webkit-appearance:none;
        -moz-appearance:none;
             appearance:none;
+}
+
+.radio-selector input:active +.radio-img {
+    opacity: .9;
+}
+
+.radio-selector input:checked +.radio-img {
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+
+.radio-img {
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:150px;height:150px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: opacity(.5);
+       -moz-filter: opacity(.5);
+            filter: opacity(.5);
+}
+
+.radio-img:hover {
+    -webkit-filter: brightness(1) opacity(.9);
+       -moz-filter: brightness(1) opacity(.9);
+            filter: brightness(1) opacity(.9);
 }
 
 .cap{background-image:url(../images/cappuccino.png);}
@@ -87,13 +134,28 @@ input[type=button] {
 .mastercard{background-image:url(http://i.imgur.com/SJbRQF7.png);}
 .paypal{background-image:url(../images/paypal.png);}
 
-.radio-selector input:active +.radio-img{opacity: .9;}
-.radio-selector input:checked +.radio-img{
+
+
+
+
+.checkbox-selector input, {
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+
+.checkbox-selector input:active +.checkbox-img {
+    opacity: .9;
+}
+
+.checkbox-selector input:checked +.checkbox-img {
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
 }
-.radio-img{
+
+.checkbox-img {
     cursor:pointer;
     background-size:contain;
     background-repeat:no-repeat;
@@ -106,12 +168,9 @@ input[type=button] {
        -moz-filter: opacity(.5);
             filter: opacity(.5);
 }
-.radio-img:hover{
+
+.checkbox-img:hover {
     -webkit-filter: brightness(1) opacity(.9);
        -moz-filter: brightness(1) opacity(.9);
             filter: brightness(1) opacity(.9);
 }
-
-a:visited{color:#888}
-a{color:#444;text-decoration:none;}
-p{margin-bottom:.3em;}

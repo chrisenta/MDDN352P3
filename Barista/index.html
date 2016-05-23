@@ -14,52 +14,50 @@
 <body>
 <div>
     <h1>Coffee Orders</h1><hr>
-<div id="yield">
-</div>
+    <div id="yield">
+    </div>
 
-<script id="home-template" type="text/x-handlebars-template">
-    <div>
-        {{#each coffees}}
+    <script id="home-template" type="text/x-handlebars-template">
         <div>
-        <p>Order No.: {{@key}}</p>
-        <p>Size: {{size}}</p>
-        <p>Caffeine: {{caffeine}}</p>
-        <p>Shots: {{shots}}</p>
-        <p>Sugar: {{sugar}}</p>
-        <p>Payment: {{payment}}</p>
-        <p><strong>Collection Type: {{collection}}</strong></p>
-        <p><em>Status: {{status}}</em></p>
-        
+            {{#each coffees}}
+            <div>
+            <p>Order No.: {{@key}}</p>
+            <p>Size: {{size}}</p>
+            <p>Caffeine: {{caffeine}}</p>
+            <p>Type: {{type}}</p>
+            <p>Shots: {{shots}}</p>
+            <p>Sugar: {{sugar}}</p>
+            <p>Payment: {{payment}}</p>
+            <p><strong>Collection Type: {{collection}}</strong></p>
+            <p><em>Status: {{status}}</em></p>
 
-        {{#if_eq status 'Waiting in Line'}}
+            {{#if_eq status 'Waiting in Line'}}
             <button onClick="making(this)" class="coffeeMake" data-key="{{@key}}">Making</button>
-        {{else}}
-        {{/if_eq}}
+            {{else}}
+            {{/if_eq}}
 
-        {{#if_eq status 'Making'}}
+            {{#if_eq status 'Making'}}
             <button onClick="readyPickup(this)" class="coffeeDone" data-key="{{@key}}">Ready for Pickup</button><p>
     
             <button onClick="readyDelivery(this)" class="coffeeDone" data-key="{{@key}}">Ready to be Delivered</button><p>
-        {{else}}
-        {{/if_eq}}
+            {{else}}
+            {{/if_eq}}
 
-        {{#if_eq status 'Ready for Pickup'}}
+            {{#if_eq status 'Ready for Pickup'}}
             <button onClick="complete(this)" class="coffeeComplete" data-key="{{@key}}">Completed</button>
-        {{else}}
-        {{/if_eq}}
+            {{else}}
+            {{/if_eq}}
 
-          {{#if_eq status 'On its way!'}}
+            {{#if_eq status 'On its way!'}}
             <button onClick="complete(this)" class="coffeeComplete" data-key="{{@key}}">Completed</button>
-        {{else}}
-        {{/if_eq}}
-
-        <hr>
-
-        </div>
-
+            {{else}}
+            {{/if_eq}}
+            <hr>
+            </div>
         {{/each}}
-    </div>
-</script>
+        </div>
+    </script>
+</div>
 
 <script src="js/appB.js"></script>
 </body>
