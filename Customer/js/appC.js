@@ -12,13 +12,6 @@
 	data.on("value", function(snapshot) {
 		var context = snapshot.val();
   		console.log(context);
-
-		var source = $("#home-template").html();
-		var template = Handlebars.compile(source);
-		var html = template(context);
-
-		 console.log(html);
-		 $("#yield").html(html);
 	});
 
 	$("#submit").click(function(){
