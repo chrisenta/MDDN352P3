@@ -15,15 +15,6 @@ div {
 	margin: 40px auto;
 }
 
-a:visited {
-    color:#888
-}
-
-a {
-    color:#444;
-    text-decoration:none;
-}
-
 p {
     margin-bottom:.3em;
 }
@@ -36,9 +27,9 @@ input[type="checkbox"] {
     display: none;
 }
 
-input[type=button] {
+a {
 	font-family: 'Roboto', sans-serif;
-	letter-spacing: 2px;
+	letter-spacing: 1.5px;
 	color: #fff;
 	padding: 10px 25px; 
 	background: #333; 
@@ -48,27 +39,31 @@ input[type=button] {
     border-radius: 5px; 
 }
 
+a:visited {
+    color:#888
+}
+
 
 /* Adapted from http://jsfiddle.net/La8wQ/10/ */
 
-.radio-selector input, {
+.radio-selector input, .checkbox-selector input {
     margin:0;padding:0;
     -webkit-appearance:none;
        -moz-appearance:none;
             appearance:none;
 }
 
-.radio-selector input:active +.radio-img {
+.radio-selector input:active +.radio-img, .checkbox-selector input:active +.checkbox-img {
     opacity: .9;
 }
 
-.radio-selector input:checked +.radio-img {
+.radio-selector input:checked +.radio-img, .checkbox-selector input:checked +.checkbox-img {
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
 }
 
-.radio-img {
+.radio-img, .checkbox-img {
     cursor:pointer;
     background-size:contain;
     background-repeat:no-repeat;
@@ -82,7 +77,7 @@ input[type=button] {
             filter: opacity(.5);
 }
 
-.radio-img:hover {
+.radio-img:hover, .checkbox-img:hover {
     -webkit-filter: brightness(1) opacity(.9);
        -moz-filter: brightness(1) opacity(.9);
             filter: brightness(1) opacity(.9);
@@ -135,42 +130,3 @@ input[type=button] {
 .paypal{background-image:url(../images/paypal.png);}
 
 
-
-
-
-.checkbox-selector input, {
-    margin:0;padding:0;
-    -webkit-appearance:none;
-       -moz-appearance:none;
-            appearance:none;
-}
-
-.checkbox-selector input:active +.checkbox-img {
-    opacity: .9;
-}
-
-.checkbox-selector input:checked +.checkbox-img {
-    -webkit-filter: none;
-       -moz-filter: none;
-            filter: none;
-}
-
-.checkbox-img {
-    cursor:pointer;
-    background-size:contain;
-    background-repeat:no-repeat;
-    display:inline-block;
-    width:150px;height:150px;
-    -webkit-transition: all 100ms ease-in;
-       -moz-transition: all 100ms ease-in;
-            transition: all 100ms ease-in;
-    -webkit-filter: opacity(.5);
-       -moz-filter: opacity(.5);
-            filter: opacity(.5);
-}
-
-.checkbox-img:hover {
-    -webkit-filter: brightness(1) opacity(.9);
-       -moz-filter: brightness(1) opacity(.9);
-            filter: brightness(1) opacity(.9);
-}
