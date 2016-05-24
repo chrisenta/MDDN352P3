@@ -1,5 +1,5 @@
 body{
-	font-family: 'Quicksand', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	line-height: 2em;
 	text-align: center;
 }
@@ -15,12 +15,9 @@ div {
 	margin: 40px auto;
 }
 
-input[type="radio"] {
-    display: none;
-}
-
-input[type=button] {
-	font-family: 'Quicksand', sans-serif;
+button {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
 	letter-spacing: 2px;
 	color: #fff;
 	padding: 10px 25px; 
@@ -29,69 +26,6 @@ input[type=button] {
     cursor: pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px; 
-}
-
-
-/* Adapted from http://jsfiddle.net/La8wQ/10/ */
-
-.radio-selector input{
-    margin:0;padding:0;
-    -webkit-appearance:none;
-       -moz-appearance:none;
-            appearance:none;
-}
-
-.small{background-image:url(../images/small.png);}
-.regular{background-image:url(../images/regular.png);}
-.large{background-image:url(../images/large.png);}
-.tall{background-image:url(../images/tall.png);}
-
-.caf{background-image:url(../images/caf.png);}
-.halfcaf{background-image:url(../images/halfcaf.png);}
-.decaf{background-image:url(../images/decaf.png);}
-
-.singleshot{background-image:url(../images/singleshot.png);}
-.doubleshot{background-image:url(../images/doubleshot.png);}
-.tripleshot{background-image:url(../images/tripleshot.png);}
-.quadshot{background-image:url(../images/quadshot.png);}
-
-.none{background-image:url(../images/0.png);}
-.cube1{background-image:url(../images/cube1.png);}
-.cube2{background-image:url(../images/cube2.png);}
-.cube3{background-image:url(../images/cube3.png);}
-.cube4{background-image:url(../images/cube4.png);}
-.cube5{background-image:url(../images/cube5.png);}
-
-.pickup{background-image:url(../images/pickup.png);}
-.delivery{background-image:url(../images/delivery.png);}
-
-.visa{background-image:url(http://i.imgur.com/lXzJ1eB.png);}
-.mastercard{background-image:url(http://i.imgur.com/SJbRQF7.png);}
-.paypal{background-image:url(../images/paypal.png);}
-
-.radio-selector input:active +.radio-img{opacity: .9;}
-.radio-selector input:checked +.radio-img{
-    -webkit-filter: none;
-       -moz-filter: none;
-            filter: none;
-}
-.radio-img{
-    cursor:pointer;
-    background-size:contain;
-    background-repeat:no-repeat;
-    display:inline-block;
-    width:120px;height:90px;
-    -webkit-transition: all 100ms ease-in;
-       -moz-transition: all 100ms ease-in;
-            transition: all 100ms ease-in;
-    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
-       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
-            filter: brightness(1.8) grayscale(1) opacity(.7);
-}
-.radio-img:hover{
-    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
-       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
-            filter: brightness(1.2) grayscale(.5) opacity(.9);
 }
 
 a:visited{color:#888}

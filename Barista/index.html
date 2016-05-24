@@ -5,7 +5,7 @@
     <title>Coffee Orders</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/main.css" rel="stylesheet" media="all">
-    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300,700italic' rel='stylesheet' type='text/css'>
     <script src="https://www.gstatic.com/firebasejs/3.0.0/firebase.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
@@ -14,57 +14,50 @@
 <body>
 <div>
     <h1>Coffee Orders</h1><hr>
-<div id="yield">
-</div>
-
-<script id="home-template" type="text/x-handlebars-template">
-    <div>
-        {{#each coffees}}
-        <div>
-        <p>Status: {{status}}</p>
-        <p>Order No.: {{@key}}</p>
-        <p>Size: {{size}}</p>
-        <p>Caffeine: {{caffeine}}</p>
-        <p>Shots: {{shots}}</p>
-        <p>Sugar: {{sugar}}</p>
-        <p>Payment: {{payment}}</p>
-        <p><p>Collection Type: {{collection}}</p></p>
-        
-
-    {{#conditions}}
-        {{#next condition1}}
-
-        <button onClick="making(this)" class="coffeeMake" data-key="{{@key}}">Making</button>
-
-        {{/next}}
-    
-        {{#next condition2}}
-
-        <button onClick="readyPickup(this)" class="coffeeDone" data-key="{{@key}}">Ready for Pickup</button><p>
-
-        {{/next}}
-
-        <button onClick="readyDelivery(this)" class="coffeeDone" data-key="{{@key}}">Ready to be Delivered</button><p>
-
-        <button onClick="complete(this)" class="coffeeComplete" data-key="{{@key}}">Completed</button>
-        
-        <hr>
- 
- {{/conditions}}
-
-        </div>
-
-        {{/each}}
+    <div id="yield">
     </div>
-</script>
 
-<!-- <div>
-  <button class="result">Making</button>
-  <button class="result">Completed</button>
-  <button class="result">Delivered</button>
+    <script id="home-template" type="text/x-handlebars-template">
+        <div>
+            {{#each coffees}}
+            <div>
+            <p>Order No.: {{@key}}</p>
+            <p>Size: {{size}}</p>
+            <p>Caffeine: {{caffeine}}</p>
+            <p>Type: {{type}}</p>
+            <p>Shots: {{shots}}</p>
+            <p>Sugar: {{sugar}}</p>
+            <p>Payment: {{payment}}</p>
+            <p><strong>Collection Type: {{collection}}</strong></p>
+            <p><em>Status: {{status}}</em></p>
+
+            {{#if_eq status 'Waiting in Line'}}
+            <button onClick="making(this)" class="coffeeMake" data-key="{{@key}}">Making</button>
+            {{else}}
+            {{/if_eq}}
+
+            {{#if_eq status 'Making'}}
+            <button onClick="readyPickup(this)" class="coffeeDone" data-key="{{@key}}">Ready for Pickup</button><p>
+    
+            <button onClick="readyDelivery(this)" class="coffeeDone" data-key="{{@key}}">Ready to be Delivered</button><p>
+            {{else}}
+            {{/if_eq}}
+
+            {{#if_eq status 'Ready for Pickup'}}
+            <button onClick="complete(this)" class="coffeeComplete" data-key="{{@key}}">Completed</button>
+            {{else}}
+            {{/if_eq}}
+
+            {{#if_eq status 'On its way!'}}
+            <button onClick="complete(this)" class="coffeeComplete" data-key="{{@key}}">Completed</button>
+            {{else}}
+            {{/if_eq}}
+            <hr>
+            </div>
+        {{/each}}
+        </div>
+    </script>
 </div>
-<input id="result-box" type="text" value="In Progress">
-  -->
 
 <script src="js/appB.js"></script>
 </body>

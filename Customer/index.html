@@ -5,10 +5,9 @@
     <title>Order Your Coffee!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link href="css/main.css" rel="stylesheet" media="all">
-    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300,700italic' rel='stylesheet' type='text/css'>
     <script src="https://www.gstatic.com/firebasejs/3.0.0/firebase.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -17,45 +16,159 @@
 
 <body>
 <div class="container">
-  <h2>Te Papa Cafe</h2>
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-    <li><a data-toggle="tab" href="#menu1">Coffee</a></li>
-    <li><a data-toggle="tab" href="#menu2">Tea</a></li>
-    <li><a data-toggle="tab" href="#menu3">Other</a></li>
-  </ul>
+    <h2>Te Papa Cafe</h2>
+    <ul class="nav nav-tabs nav-justified">
+        <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+        <li><a data-toggle="tab" href="#menu1">Coffee</a></li>
+        <li><a data-toggle="tab" href="#menu2">Tea</a></li>
+        <li><a data-toggle="tab" href="#menu3">Other</a></li>
+    </ul>
 
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-      <h3>HOME</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <h3>HOME</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
     <div id="menu1" class="tab-pane fade">
-    <hr>
+        <h3>Menu 1</h3>
+            <h1><strong>PLACE YOUR ORDER HERE</strong></h1><hr>
+            <div class="checkbox-selector">   
+                <h2>TYPE</h2>
+                    <input type="checkbox" name="type" value="cap" id="cap">
+                    <label class="checkbox-img cap" for="cap"></label>
+                    <input type="checkbox" name="type" value="flat" id="flat">
+                    <label class="checkbox-img flat" for="flat"></label>
+                    <input type="checkbox" name="type" value="hot" id="hot">
+                    <label class="checkbox-img hot" for="hot"></label>
+                    <input type="checkbox" name="type" value="latte" id="latte">
+                    <label class="checkbox-img latte" for="latte"></label>
+                    <input type="checkbox" name="type" value="longb" id="longb">
+                    <label class="checkbox-img longb" for="longb"></label>
+                    <input type="checkbox" name="type" value="macc" id="macc">
+                    <label class="checkbox-img macc" for="macc"></label>
+                    <input type="checkbox" name="type" value="mocha" id="mocha">
+                    <label class="checkbox-img mocha" for="mocha"></label>
+                    <input type="checkbox" name="type" value="shortb" id="shortb">
+                    <label class="checkbox-img shortb" for="shortb"></label>
+            </div>
+
+            <div class="radio-selector"> 
+                <h2>SIZE</h2>
+                    <input type="radio" name="size" value="small" id="small" data-price="3.0">
+                    <label class="radio-img small" for="small"></label>
+                    <input type="radio" name="size" value="regular" id="regular">
+                    <label class="radio-img regular" for="regular"></label>    
+                    <input type="radio" name="size" value="large" id="large">
+                    <label class="radio-img large" for="large"></label>
+                    <input type="radio" name="size" value="tall" id="tall">
+                    <label class="radio-img tall" for="tall"></label>
+                
+                <h2>CAFFEINE</h2>
+                    <input type="radio" name="caffeine" value="decaf" id="decaf">
+                    <label class="radio-img decaf" for="decaf"></label>    
+                    <input type="radio" name="caffeine" value="halfcaf" id="halfcaf">
+                    <label class="radio-img halfcaf" for="halfcaf"></label>
+                    <input type="radio" name="caffeine" value="caf" id="caf">
+                    <label class="radio-img caf" for="caf"></label>
+
+                <h2>SHOTS</h2>
+                    <input type="radio" name="shots" value="1" id="singleshot">
+                    <label class="radio-img singleshot" for="singleshot"></label>    
+                    <input type="radio" name="shots" value="2" id="doubleshot">
+                    <label class="radio-img doubleshot" for="doubleshot"></label>    
+                    <input type="radio" name="shots" value="3" id="tripleshot">
+                    <label class="radio-img tripleshot" for="tripleshot"></label>    
+                    <input type="radio" name="shots" value="4" id="quadshot">
+                    <label class="radio-img quadshot" for="quadshot"></label>    
+
+                <h2>SUGAR</h2>
+                    <input type="radio" name="sugar" value="none" id="none">
+                    <label class="radio-img none" for="none"></label>    
+                    <input type="radio" name="sugar" value="1" id="cube1">
+                    <label class="radio-img cube1" for="cube1"></label>    
+                    <input type="radio" name="sugar" value="2" id="cube2">
+                    <label class="radio-img cube2" for="cube2"></label>    
+                    <input type="radio" name="sugar" value="3" id="cube3">
+                    <label class="radio-img cube3" for="cube3"></label>    
+                    <input type="radio" name="sugar" value="4" id="cube4">
+                    <label class="radio-img cube4" for="cube4"></label>    
+                    <input type="radio" name="sugar" value="5" id="cube5">
+                    <label class="radio-img cube5" for="cube5"></label>     
+
+                <h2>PICKUP OR DELIVERY</h2>
+                    <input type="radio" name="collection" value="pickup" id="pickup">
+                    <label class="radio-img pickup" for="pickup"></label>
+                    <input type="radio" name="collection" value="delivery" id="delivery">
+                    <label class="radio-img delivery" for="delivery"></label>
+
+                <h2>PRICE</h2>
+                
 
 
-<script src="js/appC.js"></script>
+                <h2>PAYMENT TYPE</h2>
+                    <input type="radio" name="cc" value="visa" id="visa">
+                    <label class="radio-img visa" for="visa"></label>
+                    <input type="radio" name="cc" value="mastercard" id="mastercard">
+                    <label class="radio-img mastercard" for="mastercard"></label>
+                    <input type="radio" name="cc" value="paypal" id="paypal">
+                    <label class="radio-img paypal" for="paypal"></label>
+            </div>
+
+                <p><a href="index2.html" id="submit">ORDER</a>
+
     </div>
+
+<hr>
+
     <div id="menu2" class="tab-pane fade">
-      <h3>Menu 2</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        <h3>Menu 2</h3>
+          
+          <h1><strong>PLACE YOUR ORDER HERE</strong></h1><hr>
+            <div class="checkbox-selector">   
+                <h2>TYPE</h2>
+                    <input type="checkbox" name="type" value="berry" id="berry">
+                    <label class="checkbox-img berry" for="berry"></label>
+                    <input type="checkbox" name="type" value="breakfast" id="breakfast">
+                    <label class="checkbox-img breakfast" for="breakfast"></label>
+                    <input type="checkbox" name="type" value="cham" id="cham">
+                    <label class="checkbox-img cham" for="cham"></label>
+                    <input type="checkbox" name="type" value="earl" id="earl">
+                    <label class="checkbox-img earl" for="earl"></label>
+                    <input type="checkbox" name="type" value="green" id="green">
+                    <label class="checkbox-img green" for="green"></label>
+                    <input type="checkbox" name="type" value="lemon" id="lemon">
+                    <label class="checkbox-img lemon" for="lemon"></label>
+                    <input type="checkbox" name="type" value="pepper" id="pepper">
+                    <label class="checkbox-img pepper" for="pepper"></label>
+            </div>
     </div>
+
     <div id="menu3" class="tab-pane fade">
-      <h3>Menu 3</h3>
-      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-    </div>
-  </div>
+        <h3>Other Drinks</h3>
+            <div class="checkbox-selector">   
+                <p><h2>JUICES</h2></p>
+                    <input type="checkbox" name="juices" value="orangejuice" id="orangejuice">
+                    <label class="checkbox-img orangejuice" for="orangejuice"></label>
+                    <input type="checkbox" name="juices" value="cranberryjuice" id="cranberryjuice">
+                    <label class="checkbox-img cranberryjuice" for="cranberryjuice"></label>  
+                <p><h2>WATER</h2></p>
+                    <input type="checkbox" name="water" value="stillwater" id="stillwater">
+                    <label class="checkbox-img stillwater" for="stillwater"></label>
+                    <input type="checkbox" name="water" value="sparklingwater" id="sparklingwater">
+                    <label class="checkbox-img sparklingwater" for="sparklingwater"></label>  
+                <p><h2>SOFT DRINKS</h2></p>
+                    <input type="checkbox" name="softdrinks" value="coke" id="coke">
+                    <label class="checkbox-img coke" for="coke"></label>
+                    <input type="checkbox" name="softdrinks" value="cokezero" id="cokezero">
+                    <label class="checkbox-img cokezero" for="cokezero"></label> 
+                    <input type="checkbox" name="softdrinks" value="sprite" id="sprite">
+                    <label class="checkbox-img sprite" for="sprite"></label>
+                    <input type="checkbox" name="softdrinks" value="lnp" id="lnp">
+                    <label class="checkbox-img lnp" for="lnp"></label> 
+                    <hr>
+            </div>
 </div>
-
-<div>
-      <h3>Menu 1</h3>
-       <h1><strong>PLACE YOUR ORDER HERE</strong></h1><hr>
-
-    
-</div>
-
-
-
-   
+<script src="js/appC.js"></script>
 </body>
 </html>

@@ -1,7 +1,8 @@
-body{
-	font-family: 'Quicksand', sans-serif;
+body {
+	font-family: 'Roboto', sans-serif;
 	line-height: 2em;
 	text-align: center;
+
 }
 
 @media all and (max-width: 800px) {
@@ -15,13 +16,21 @@ div {
 	margin: 40px auto;
 }
 
+p {
+    margin-bottom:.3em;
+}
+
 input[type="radio"] {
     display: none;
 }
 
-input[type=button] {
-	font-family: 'Quicksand', sans-serif;
-	letter-spacing: 2px;
+input[type="checkbox"] {
+    display: none;
+}
+
+a {
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 1.5px;
 	color: #fff;
 	padding: 10px 25px; 
 	background: #333; 
@@ -31,15 +40,67 @@ input[type=button] {
     border-radius: 5px; 
 }
 
+a:visited {
+    color:#888
+}
+
 
 /* Adapted from http://jsfiddle.net/La8wQ/10/ */
 
-.radio-selector input{
+.radio-selector input, .checkbox-selector input {
     margin:0;padding:0;
     -webkit-appearance:none;
        -moz-appearance:none;
             appearance:none;
 }
+
+.radio-selector input:active +.radio-img, .checkbox-selector input:active +.checkbox-img {
+    opacity: .9;
+}
+
+.radio-selector input:checked +.radio-img, .checkbox-selector input:checked +.checkbox-img {
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+
+.radio-img, .checkbox-img {
+    cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:150px;height:150px;
+    -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: opacity(.5);
+       -moz-filter: opacity(.5);
+            filter: opacity(.5);
+}
+
+.radio-img:hover, .checkbox-img:hover {
+    -webkit-filter: brightness(1) opacity(.9);
+       -moz-filter: brightness(1) opacity(.9);
+            filter: brightness(1) opacity(.9);
+}
+
+.cap{background-image:url(../images/cappuccino.png);}
+.flat{background-image:url(../images/flatwhite.png);}
+.hot{background-image:url(../images/hotchoc.png);}
+.latte{background-image:url(../images/latte.png);}
+.longb{background-image:url(../images/longblack.png);}
+.macc{background-image:url(../images/macchiato.png);}
+.mocha{background-image:url(../images/mochaccino.png);}
+.shortb{background-image:url(../images/shortblack.png);}
+
+.orangejuice{background-image:url(../images/orangejuice.png);}
+.cranberryjuice{background-image:url(../images/cranberryjuice.png);}
+.stillwater{background-image:url(../images/stillwater.png);}
+.sparklingwater{background-image:url(../images/sparklingwater.png);}
+.coke{background-image:url(../images/coke.png);}
+.cokezero{background-image:url(../images/cokezero.png);}
+.sprite{background-image:url(../images/sprite.png);}
+.lnp{background-image:url(../images/lnp.png);}
 
 .small{background-image:url(../images/small.png);}
 .regular{background-image:url(../images/regular.png);}
@@ -69,31 +130,23 @@ input[type=button] {
 .mastercard{background-image:url(http://i.imgur.com/SJbRQF7.png);}
 .paypal{background-image:url(../images/paypal.png);}
 
-.radio-selector input:active +.radio-img{opacity: .9;}
-.radio-selector input:checked +.radio-img{
-    -webkit-filter: none;
-       -moz-filter: none;
-            filter: none;
-}
-.radio-img{
-    cursor:pointer;
-    background-size:contain;
-    background-repeat:no-repeat;
-    display:inline-block;
-    width:120px;height:90px;
-    -webkit-transition: all 100ms ease-in;
-       -moz-transition: all 100ms ease-in;
-            transition: all 100ms ease-in;
-    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
-       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
-            filter: brightness(1.8) grayscale(1) opacity(.7);
-}
-.radio-img:hover{
-    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
-       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
-            filter: brightness(1.2) grayscale(.5) opacity(.9);
-}
 
-a:visited{color:#888}
-a{color:#444;text-decoration:none;}
-p{margin-bottom:.3em;}
+.berry{background-image:url(../images/berrytea.png);}
+.breakfast{background-image:url(../images/breakfastea.png);}
+.cham{background-image:url(../images/chamamile.png);}
+.earl{background-image:url(../images/earlgrey.png);}
+.green{background-image:url(../images/greentea.png);}
+.lemon{background-image:url(../images/lemontea.png);}
+.pepper{background-image:url(../images/peppermint.png);}
+
+ .nav-tabs li a {font-size:20px;}
+
+ 
+  
+
+
+
+
+
+
+

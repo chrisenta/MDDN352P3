@@ -12,7 +12,6 @@
 
 
 
-
 	data.on("value", function(snapshot) {
 		var context = snapshot.val();
   		console.log(context);
@@ -34,9 +33,15 @@ function complete(element){
 
 function making(element){
 	var id = element.getAttribute('data-key');
+	console.log(data);
 	data.child('coffees/' + id).update({
 		status: "Making"
 	});
+
+	// firebase.database().ref('users/' + userId).set({
+ //    username: name,
+ //    email: email
+ //  });
 }
 
 function readyPickup(element){
@@ -53,20 +58,11 @@ function readyDelivery(element){
 	});
 }
 
-Handlebars.registerHelper('conditions', function (options) {
-    var data = this;
-    data.__check_conditions = true;
-    return options.fn(this);
+Handlebars.registerHelper('if_eq', function(a, b, opts) {
+    if (a == b) {
+        return opts.fn(this);
+    } else {
+        return opts.inverse(this);
+    }
 });
-
-
-Handlebars.registerHelper('next', function(conditional, options) {
-  if(conditional && this.__check_conditions) {
-      this.__check_conditions = false;
-      return options.fn(this);
-  } else {
-      return options.inverse(this);
-  }
-});
-
 
