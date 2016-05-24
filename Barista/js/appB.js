@@ -9,9 +9,6 @@
 
   var data = firebase.database().ref();
 
-
-
-
 	data.on("value", function(snapshot) {
 		var context = snapshot.val();
   		console.log(context);
@@ -37,11 +34,6 @@ function making(element){
 	data.child('coffees/' + id).update({
 		status: "Making"
 	});
-
-	// firebase.database().ref('users/' + userId).set({
- //    username: name,
- //    email: email
- //  });
 }
 
 function readyPickup(element){

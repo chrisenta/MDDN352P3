@@ -84,14 +84,14 @@ a:visited {
             filter: brightness(1) opacity(.9);
 }
 
-.cap{background-image:url(../images/cappuccino.png);}
-.flat{background-image:url(../images/flatwhite.png);}
-.hot{background-image:url(../images/hotchoc.png);}
+.cappuccino{background-image:url(../images/cappuccino.png);}
+.flatwhite{background-image:url(../images/flatwhite.png);}
+.hotchoc{background-image:url(../images/hotchoc.png);}
 .latte{background-image:url(../images/latte.png);}
-.longb{background-image:url(../images/longblack.png);}
-.macc{background-image:url(../images/macchiato.png);}
-.mocha{background-image:url(../images/mochaccino.png);}
-.shortb{background-image:url(../images/shortblack.png);}
+.longblack{background-image:url(../images/longblack.png);}
+.macchiato{background-image:url(../images/macchiato.png);}
+.mochaccino{background-image:url(../images/mochaccino.png);}
+.shortblack{background-image:url(../images/shortblack.png);}
 
 .orangejuice{background-image:url(../images/orangejuice.png);}
 .cranberryjuice{background-image:url(../images/cranberryjuice.png);}
