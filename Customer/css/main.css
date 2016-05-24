@@ -149,11 +149,12 @@ a:visited {
 }
 .tab-content{
     background-color:white;
-    color:#fff;
+   
     padding:5px
 }
 .nav-tabs > li > a{
   border: medium none;
+  color:pink;
 }
 .nav-tabs > li > a:hover{
   background-color: #ffddfa !important;
