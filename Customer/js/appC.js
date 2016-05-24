@@ -48,19 +48,29 @@ console.log(coffee);
 data.child("coffees").push(coffee);
 });
 
-$("#submitOther").click(function(){
-	var other = {
-	juices: null,
-	water: null,
-	softdrinks: null,
+$("#submitTea").click(function(){
+	var tea = {
 	}
 
-	//how to fix it so the empty ones just get ignored, the selected ones get pushed through
-	
+tea.tea = $('input:checkbox[name=tea]:checked').val();
+tea.status = "Waiting in Line";
+
+console.log(other);
+data.child("teas").push(tea);
+});
+
+$("#submitOther").click(function(){
+	var other = {
+	}
+
 other.juices = $('input:checkbox[name=juices]:checked').val();
 other.water = $('input:checkbox[name=water]:checked').val();
 other.softdrinks = $('input:checkbox[name=softdrinks]:checked').val();
 other.status = "Waiting in Line";
+
+if(other.juices == null){delete other.juices}
+if(other.water == null){delete other.water}
+if(other.softdrinks == null){delete other.softdrinks}
 
 console.log(other);
 data.child("others").push(other);
