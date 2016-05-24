@@ -55,7 +55,7 @@ $("#submitTea").click(function(){
 tea.tea = $('input:checkbox[name=tea]:checked').val();
 tea.status = "Waiting in Line";
 
-console.log(other);
+console.log(tea);
 data.child("teas").push(tea);
 });
 

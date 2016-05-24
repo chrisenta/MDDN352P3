@@ -22,14 +22,81 @@
             {{#each coffees}}
             <div>
             <p>Order No.: {{@key}}</p>
-            <p>Size: {{size}}</p>
-            <p>Caffeine: {{caffeine}}</p>
             <img src="images/{{type}}.png"> 
-            <p>Type: {{type}}</p>
-            <p>Shots: {{shots}}</p>
-            <p>Sugar: {{sugar}}</p>
-            <p>Payment: {{payment}}</p>
-            <p><strong>Collection Type: {{collection}}</strong></p>
+            <img src="images/{{size}}.png"> 
+            <img src="images/{{caffeine}}.png"> 
+            <img src="images/{{shots}}.png"> 
+            <img src="images/{{sugar}}.png"> 
+            <img src="images/{{payment}}.png"> 
+            <p><img src="images/{{collection}}.png"> </p>
+            <p><em>Status: {{status}}</em></p>
+
+            {{#if_eq status 'Waiting in Line'}}
+            <button onClick="making(this)" class="coffeeMake" data-key="{{@key}}">Making</button>
+            {{else}}
+            {{/if_eq}}
+
+            {{#if_eq status 'Making'}}
+            <button onClick="readyPickup(this)" class="coffeeDone" data-key="{{@key}}">Ready for Pickup</button><p>
+    
+            <button onClick="readyDelivery(this)" class="coffeeDone" data-key="{{@key}}">Ready to be Delivered</button><p>
+            {{else}}
+            {{/if_eq}}
+
+            {{#if_eq status 'Ready for Pickup'}}
+            <button onClick="complete(this)" class="coffeeComplete" data-key="{{@key}}">Completed</button>
+            {{else}}
+            {{/if_eq}}
+
+            {{#if_eq status 'On its way!'}}
+            <button onClick="complete(this)" class="coffeeComplete" data-key="{{@key}}">Completed</button>
+            {{else}}
+            {{/if_eq}}
+            <hr>
+            </div>
+        {{/each}}
+        </div>
+
+        <div>
+            {{#each teas}}
+            <div>
+            <p>Order No.: {{@key}}</p>
+            <img src="images/{{tea}}.png"> 
+            <p><em>Status: {{status}}</em></p>
+
+            {{#if_eq status 'Waiting in Line'}}
+            <button onClick="making(this)" class="coffeeMake" data-key="{{@key}}">Making</button>
+            {{else}}
+            {{/if_eq}}
+
+            {{#if_eq status 'Making'}}
+            <button onClick="readyPickup(this)" class="coffeeDone" data-key="{{@key}}">Ready for Pickup</button><p>
+    
+            <button onClick="readyDelivery(this)" class="coffeeDone" data-key="{{@key}}">Ready to be Delivered</button><p>
+            {{else}}
+            {{/if_eq}}
+
+            {{#if_eq status 'Ready for Pickup'}}
+            <button onClick="complete(this)" class="coffeeComplete" data-key="{{@key}}">Completed</button>
+            {{else}}
+            {{/if_eq}}
+
+            {{#if_eq status 'On its way!'}}
+            <button onClick="complete(this)" class="coffeeComplete" data-key="{{@key}}">Completed</button>
+            {{else}}
+            {{/if_eq}}
+            <hr>
+            </div>
+        {{/each}}
+        </div>
+
+        <div>
+            {{#each others}}
+            <div>
+            <p>Order No.: {{@key}}</p>
+            <img src="images/{{juices}}.png"> 
+            <img src="images/{{water}}.png"> 
+            <img src="images/{{softdrinks}}.png"> 
             <p><em>Status: {{status}}</em></p>
 
             {{#if_eq status 'Waiting in Line'}}
