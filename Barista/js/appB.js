@@ -21,35 +21,6 @@
 		 $("#yield").html(html);
 	});
 
-
-function complete(element){
-	var id = element.getAttribute('data-key');
-	data.child('coffees/' + id).remove();
-}
-
-
-function making(element){
-	var id = element.getAttribute('data-key');
-	console.log(data);
-	data.child('coffees/' + id).update({
-		status: "Making"
-	});
-}
-
-function readyPickup(element){
-	var id = element.getAttribute('data-key');
-	data.child('coffees/' + id).update({
-		status: "Ready for Pickup"
-	});
-}
-
-function readyDelivery(element){
-	var id = element.getAttribute('data-key');
-	data.child('coffees/' + id).update({
-		status: "On its way!"
-	});
-}
-
 Handlebars.registerHelper('if_eq', function(a, b, opts) {
     if (a == b) {
         return opts.fn(this);
@@ -58,3 +29,88 @@ Handlebars.registerHelper('if_eq', function(a, b, opts) {
     }
 });
 
+//All the Buttons -- COFFEE
+
+function completeC(element){
+	var id = element.getAttribute('data-key');
+	data.child('coffees/' + id).remove();
+}
+
+function makingC(element){
+	var id = element.getAttribute('data-key');
+	data.child('coffees/' + id).update({
+		status: "Making"
+	});
+}
+
+function readyPickupC(element){
+	var id = element.getAttribute('data-key');
+	data.child('coffees/' + id).update({
+		status: "Ready for Pickup"
+	});
+}
+
+function readyDeliveryC(element){
+	var id = element.getAttribute('data-key');
+	data.child('coffees/' + id).update({
+		status: "On its way!"
+	});
+}
+
+//All the Buttons -- TEA
+
+function completeT(element){
+	var id = element.getAttribute('data-key');
+	data.child('teas/' + id).remove();
+}
+
+function makingT(element){
+	var id = element.getAttribute('data-key');
+	console.log(data);
+	data.child('teas/' + id).update({
+		status: "Preparing"
+	});
+}
+
+function readyPickupT(element){
+	var id = element.getAttribute('data-key');
+	data.child('teas/' + id).update({
+		status: "Ready for Pickup"
+	});
+}
+
+function readyDeliveryT(element){
+	var id = element.getAttribute('data-key');
+	data.child('teas/' + id).update({
+		status: "On its way!"
+	});
+}
+
+//All the Buttons -- OTHERS
+
+function completeO(element){
+	var id = element.getAttribute('data-key');
+	data.child('others/' + id).remove();
+}
+
+function makingO(element){
+	var id = element.getAttribute('data-key');
+	console.log(data);
+	data.child('others/' + id).update({
+		status: "Preparing"
+	});
+}
+
+function readyPickupO(element){
+	var id = element.getAttribute('data-key');
+	data.child('others/' + id).update({
+		status: "Ready for Pickup"
+	});
+}
+
+function readyDeliveryO(element){
+	var id = element.getAttribute('data-key');
+	data.child('others/' + id).update({
+		status: "On its way!"
+	});
+}
