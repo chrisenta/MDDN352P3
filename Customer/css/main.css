@@ -2,12 +2,10 @@ body {
 	font-family: 'Roboto', sans-serif;
 	line-height: 2em;
 	text-align: center;
-
 }
 
 @media all and (max-width: 800px) {
- 	body{
- 		
+ 	body{	
  	}
 }
 
@@ -93,6 +91,14 @@ a:visited {
 .mochaccino{background-image:url(../images/mochaccino.png);}
 .shortblack{background-image:url(../images/shortblack.png);}
 
+.berry{background-image:url(../images/berry.png);}
+.breakfast{background-image:url(../images/breakfast.png);}
+.cham{background-image:url(../images/cham.png);}
+.earl{background-image:url(../images/earl.png);}
+.green{background-image:url(../images/green.png);}
+.lemon{background-image:url(../images/lemon.png);}
+.pepper{background-image:url(../images/pepper.png);}
+
 .orangejuice{background-image:url(../images/orangejuice.png);}
 .cranberryjuice{background-image:url(../images/cranberryjuice.png);}
 .stillwater{background-image:url(../images/stillwater.png);}
@@ -103,25 +109,12 @@ a:visited {
 .lnp{background-image:url(../images/lnp.png);}
 
 .small{background-image:url(../images/small.png);}
-.regular{background-image:url(../images/regular.png);}
+.medium{background-image:url(../images/medium.png);}
 .large{background-image:url(../images/large.png);}
-.tall{background-image:url(../images/tall.png);}
 
-.caf{background-image:url(../images/caf.png);}
-.halfcaf{background-image:url(../images/halfcaf.png);}
-.decaf{background-image:url(../images/decaf.png);}
-
-.singleshot{background-image:url(../images/singleshot.png);}
-.doubleshot{background-image:url(../images/doubleshot.png);}
-.tripleshot{background-image:url(../images/tripleshot.png);}
-.quadshot{background-image:url(../images/quadshot.png);}
-
-.none{background-image:url(../images/0.png);}
-.cube1{background-image:url(../images/cube1.png);}
-.cube2{background-image:url(../images/cube2.png);}
-.cube3{background-image:url(../images/cube3.png);}
-.cube4{background-image:url(../images/cube4.png);}
-.cube5{background-image:url(../images/cube5.png);}
+.shot{background-image:url(../images/shot.png);}
+.sugar{background-image:url(../images/sugar.png);}
+.soy{background-image:url(../images/soy.png);}
 
 .pickup{background-image:url(../images/pickup.png);}
 .delivery{background-image:url(../images/delivery.png);}
@@ -130,38 +123,27 @@ a:visited {
 .mastercard{background-image:url(http://i.imgur.com/SJbRQF7.png);}
 .paypal{background-image:url(../images/paypal.png);}
 
-
-.berry{background-image:url(../images/berry.png);}
-.breakfast{background-image:url(../images/breakfast.png);}
-.cham{background-image:url(../images/cham.png);}
-.earl{background-image:url(../images/earl.png);}
-.green{background-image:url(../images/green.png);}
-.lemon{background-image:url(../images/lemon.png);}
-.pepper{background-image:url(../images/pepper.png);}
-
- .nav-tabs li a {font-size:20px;
+.nav-tabs li a {font-size:20px;
 
  }
-
 
 .nav-tabs{
   background-color:white;
 }
+
 .tab-content{
     background-color:white;
-   
     padding:5px
 }
+
 .nav-tabs > li > a{
   border: medium none;
   color:pink;
 }
+
 .nav-tabs > li > a:hover{
   background-color: #ffddfa !important;
     border: medium none;
     border-radius: 0;
     color:#981e8e;
 }
-
- 
-  
