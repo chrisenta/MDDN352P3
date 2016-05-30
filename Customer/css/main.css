@@ -145,5 +145,9 @@ a:visited {
   background-color: #6b9a16!important;
     border: medium none;
     border-radius: 0;
+<<<<<<< HEAD
     color:black;
+=======
+    color:#981e8e;
+>>>>>>> origin/gh-pages
 }
