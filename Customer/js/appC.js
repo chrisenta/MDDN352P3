@@ -21,36 +21,98 @@ data.on("value", function(snapshot) {
 	 $("#yield").html(html);
 });
 
-$("#submit").click(function(){
+$("#submitCof").click(function(){
 	var coffee = {
-	size: null,
-	caffeine: null,
-	type: null,
-	shots: null,
-	sugar: null,
-	payment: null,
-	collection: null,
-	status: null,
+
 	}
 
 coffee.size = $('input:radio[name=size]:checked').val();
-coffee.caffeine = $('input:radio[name=caffeine]:checked').val();
-coffee.type = $('input:checkbox[name=type]:checked').val();
-coffee.shots = $('input:radio[name=shots]:checked').val();
-coffee.sugar = $('input:radio[name=sugar]:checked').val();
+coffee.type = $('input:radio[name=type]:checked').val();
+coffee.extras = $('input:checkbox[name=extras]:checked').map(function(_, el) {
+    return $(el).val();
+}).get();
 coffee.payment = $('input:radio[name=cc]:checked').val();
 coffee.collection = $('input:radio[name=collection]:checked').val();
 coffee.status = "Waiting in Line";
 
-
-function calculateTotalPrice() {
-	var typePrice = $('input:radio[name=size]:checked').data('price');
-
-	return 3;  // supposed to be the actual total price
-}
+if(coffee.extras == null){delete coffee.extras}
 
 console.log(coffee);
 data.child("coffees").push(coffee);
 });
 
+$("#submitTea").click(function(){
+	var tea = {
+	}
 
+tea.tea = $('input:checkbox[name=tea]:checked').map(function(_, el) {
+    return $(el).val();
+}).get();
+tea.collection = $('input:radio[name=collection]:checked').val();
+tea.status = "Waiting in Line";
+
+console.log(tea);
+data.child("teas").push(tea);
+});
+
+$("#submitOther").click(function(){
+	var other = {
+	}
+
+other.other = $('input:checkbox[name=other]:checked').map(function(_, el) {
+    return $(el).val();
+}).get();
+other.collection = $('input:radio[name=collection]:checked').val();
+other.status = "Waiting in Line";
+
+console.log(other);
+data.child("others").push(other);
+});
+
+
+function calculateTotalPrice() {
+	var sizePrice = $('input:radio[name=size]:checked').data('price');
+	var typePrice = $('input:radio[name=type]:checked').data('price');
+	
+	var extraPrice = 0;
+	$('input:checkbox[name=extras]:checked').each(function () {
+	  extraPrice += $(this).data('price');
+	});
+
+	return sizePrice + typePrice + extraPrice;  // supposed to be the actual total price
+}
+
+function calculateTeaPrice() {
+
+	var teaPrice = 0;
+	$('input:checkbox[name=tea]:checked').each(function () {
+	  teaPrice += $(this).data('price');
+	});
+
+	return teaPrice;  // supposed to be the actual total price
+}
+
+
+function calculateOtherPrice() {
+
+	var otherPrice = 0;
+	$('input:checkbox[name=other]:checked').each(function () {
+	  otherPrice += $(this).data('price');
+	});
+
+	return otherPrice;  // supposed to be the actual total price
+}
+//calculateTeaPrice
+
+$('input').change(function(){
+        var price = calculateTotalPrice();
+      	$('#costTotal').text('Total Cost: $' + price);
+
+      	// do again for tea
+      	var teaPrice = calculateTeaPrice();
+      	$('#teaCostTotal').text('Total Cost: $' + teaPrice);
+
+      	// do again for water/juce
+      	var otherPrice = calculateOtherPrice();
+      	$('#otherCostTotal').text('Total Cost: $' + otherPrice);
+ });$

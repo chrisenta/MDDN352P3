@@ -28,6 +28,12 @@ button {
     border-radius: 5px; 
 }
 
+img {
+	width: 150px;
+	height: 150px;
+	/*display: inline-block;*/
+}
+
 a:visited{color:#888}
 a{color:#444;text-decoration:none;}
 p{margin-bottom:.3em;}
