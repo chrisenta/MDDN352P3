@@ -71,7 +71,48 @@ data.child("others").push(other);
 
 
 function calculateTotalPrice() {
-	var typePrice = $('input:radio[name=size]:checked').data('price');
+	var sizePrice = $('input:radio[name=size]:checked').data('price');
+	var typePrice = $('input:radio[name=type]:checked').data('price');
+	
+	var extraPrice = 0;
+	$('input:checkbox[name=extras]:checked').each(function () {
+	  extraPrice += $(this).data('price');
+	});
 
-	return 3;  // supposed to be the actual total price
+	return sizePrice + typePrice + extraPrice;  // supposed to be the actual total price
 }
+
+function calculateTeaPrice() {
+
+	var teaPrice = 0;
+	$('input:checkbox[name=tea]:checked').each(function () {
+	  teaPrice += $(this).data('price');
+	});
+
+	return teaPrice;  // supposed to be the actual total price
+}
+
+
+function calculateOtherPrice() {
+
+	var otherPrice = 0;
+	$('input:checkbox[name=other]:checked').each(function () {
+	  otherPrice += $(this).data('price');
+	});
+
+	return otherPrice;  // supposed to be the actual total price
+}
+//calculateTeaPrice
+
+$('input').change(function(){
+        var price = calculateTotalPrice();
+      	$('#costTotal').text('Total Cost: $' + price);
+
+      	// do again for tea
+      	var teaPrice = calculateTeaPrice();
+      	$('#teaCostTotal').text('Total Cost: $' + teaPrice);
+
+      	// do again for water/juce
+      	var otherPrice = calculateOtherPrice();
+      	$('#otherCostTotal').text('Total Cost: $' + otherPrice);
+ });$

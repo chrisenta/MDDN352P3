@@ -52,40 +52,49 @@
             <h1><strong>ORDER YOUR COFFEE HERE</strong></h1><hr>
             <div class="radio-selector">   
                 <h2>SIZE</h2>
-                    <input type="radio" name="size" value="small" id="small" data-price="3.0">
+                    <input type="radio" name="size" value="small" id="small" data-price="0">
                     <label class="radio-img small" for="small"></label>
-                    <input type="radio" name="size" value="medium" id="medium">
+                   
+                    <input type="radio" name="size" value="medium" id="medium" data-price="0.5">
                     <label class="radio-img medium" for="medium"></label>    
-                    <input type="radio" name="size" value="large" id="large">
+                    
+                    <input type="radio" name="size" value="large" id="large" data-price="1"> 
                     <label class="radio-img large" for="large"></label>
                 
                 <h2>TYPE</h2>
-                    <input type="radio" name="type" value="cappuccino" id="cappuccino">
+                    <input type="radio" name="type" value="cappuccino" id="cappuccino" data-price="3">
                     <label class="radio-img cappuccino" for="cappuccino"></label>
-                    <input type="radio" name="type" value="flatwhite" id="flatwhite">
+                    
+                    <input type="radio" name="type" value="flatwhite" id="flatwhite" data-price="3">
                     <label class="radio-img flatwhite" for="flatwhite"></label>
-                    <input type="radio" name="type" value="hotchoc" id="hotchoc">
+                    
+                    <input type="radio" name="type" value="hotchoc" id="hotchoc"  data-price="3.5">
                     <label class="radio-img hotchoc" for="hotchoc"></label>
-                    <input type="radio" name="type" value="latte" id="latte">
+                    
+                    <input type="radio" name="type" value="latte" id="latte" data-price="3">
                     <label class="radio-img latte" for="latte"></label>
-                    <input type="radio" name="type" value="longblack" id="longblack">
+                    
+                    <input type="radio" name="type" value="longblack" id="longblack" data-price="2">
                     <label class="radio-img longblack" for="longblack"></label>
-                    <input type="radio" name="type" value="macchiato" id="macchiato">
+                    
+                    <input type="radio" name="type" value="macchiato" id="macchiato" data-price="2.5">
                     <label class="radio-img macchiato" for="macchiato"></label>
-                    <input type="radio" name="type" value="mochaccino" id="mochaccino">
+                    
+                    <input type="radio" name="type" value="mochaccino" id="mochaccino" data-price="4">
                     <label class="radio-img mochaccino" for="mochaccino"></label>
-                    <input type="radio" name="type" value="shortblack" id="shortblack">
+                    
+                    <input type="radio" name="type" value="shortblack" id="shortblack" data-price="2">
                     <label class="radio-img shortblack" for="shortblack"></label>
 
                     </div>
 
                 <h2>EXTRAS</h2>
                 <div class="checkbox-selector">  
-                    <input type="checkbox" name="extras" value="soy" id="soy">
+                    <input type="checkbox" name="extras" value="soy" id="soy" data-price="0.5">
                     <label class="checkbox-img soy" for="soy"></label>    
-                    <input type="checkbox" name="extras" value="sugar" id="sugar">
+                    <input type="checkbox" name="extras" value="sugar" id="sugar" data-price="0.5">
                     <label class="checkbox-img sugar" for="sugar"></label> 
-                    <input type="checkbox" name="extras" value="shot" id="shot">
+                    <input type="checkbox" name="extras" value="shot" id="shot" data-price="1">
                     <label class="checkbox-img shot" for="shot"></label>    
                 </div>
   
@@ -97,6 +106,7 @@
                     <label class="radio-img delivery" for="delivery"></label>
 
                 <h2>PAYMENT TYPE</h2>
+                    <h4 id="costTotal">Total : $ </h4>
                     <input type="radio" name="cc" value="visa" id="visa">
                     <label class="radio-img visa" for="visa"></label>
                     <input type="radio" name="cc" value="mastercard" id="mastercard">
@@ -117,22 +127,23 @@
           <h1><strong>ORDER YOUR TEA HERE</strong></h1><hr>
             <div class="checkbox-selector">   
                 <h2>TYPE</h2>
-                    <input type="checkbox" name="tea" value="berry" id="berry">
+                    <input type="checkbox" name="tea" value="berry" id="berry" data-price="3">
                     <label class="checkbox-img berry" for="berry"></label>
-                    <input type="checkbox" name="tea" value="breakfast" id="breakfast">
+                    <input type="checkbox" name="tea" value="breakfast" id="breakfast"  data-price="3">
                     <label class="checkbox-img breakfast" for="breakfast"></label>
-                    <input type="checkbox" name="tea" value="cham" id="cham">
+                    <input type="checkbox" name="tea" value="cham" id="cham"  data-price="3">
                     <label class="checkbox-img cham" for="cham"></label>
-                    <input type="checkbox" name="tea" value="earl" id="earl">
+                    <input type="checkbox" name="tea" value="earl" id="earl"  data-price="3">
                     <label class="checkbox-img earl" for="earl"></label>
-                    <input type="checkbox" name="tea" value="green" id="green">
+                    <input type="checkbox" name="tea" value="green" id="green" data-price="3">
                     <label class="checkbox-img green" for="green"></label>
-                    <input type="checkbox" name="tea" value="lemon" id="lemon">
+                    <input type="checkbox" name="tea" value="lemon" id="lemon" data-price="3">
                     <label class="checkbox-img lemon" for="lemon"></label>
-                    <input type="checkbox" name="tea" value="pepper" id="pepper">
+                    <input type="checkbox" name="tea" value="pepper" id="pepper"  data-price="3">
                     <label class="checkbox-img pepper" for="pepper"></label>
 
                 <h2>PICKUP OR DELIVERY</h2>
+                    <h4 id="teaCostTotal">Total : $ </h4>
                     <input type="radio" name="collection" value="pickup" id="pickup">
                     <label class="radio-img pickup" for="pickup"></label>
                     <input type="radio" name="collection" value="delivery" id="delivery">
@@ -147,26 +158,27 @@
         <h3>Other Drinks</h3>
             <div class="checkbox-selector">   
                 <p><h2>JUICES</h2></p>
-                    <input type="checkbox" name="juices" value="orangejuice" id="orangejuice">
+                    <input type="checkbox" name="other" value="orangejuice" id="orangejuice" data-price="4">
                     <label class="checkbox-img orangejuice" for="orangejuice"></label>
-                    <input type="checkbox" name="juices" value="cranberryjuice" id="cranberryjuice">
+                    <input type="checkbox" name="other" value="cranberryjuice" id="cranberryjuice" data-price="4">
                     <label class="checkbox-img cranberryjuice" for="cranberryjuice"></label>  
                 <p><h2>WATER</h2></p>
-                    <input type="checkbox" name="water" value="stillwater" id="stillwater">
+                    <input type="checkbox" name="other" value="stillwater" id="stillwater" data-price="3">
                     <label class="checkbox-img stillwater" for="stillwater"></label>
-                    <input type="checkbox" name="water" value="sparklingwater" id="sparklingwater">
+                    <input type="checkbox" name="other" value="sparklingwater" id="sparklingwater" data-price="3">
                     <label class="checkbox-img sparklingwater" for="sparklingwater"></label>  
                 <p><h2>SOFT DRINKS</h2></p>
-                    <input type="checkbox" name="softdrinks" value="coke" id="coke">
+                    <input type="checkbox" name="other" value="coke" id="coke" data-price="3">
                     <label class="checkbox-img coke" for="coke"></label>
-                    <input type="checkbox" name="softdrinks" value="cokezero" id="cokezero">
+                    <input type="checkbox" name="other" value="cokezero" id="cokezero" data-price="3">
                     <label class="checkbox-img cokezero" for="cokezero"></label> 
-                    <input type="checkbox" name="softdrinks" value="sprite" id="sprite">
+                    <input type="checkbox" name="other" value="sprite" id="sprite" data-price="3">
                     <label class="checkbox-img sprite" for="sprite"></label>
-                    <input type="checkbox" name="softdrinks" value="lnp" id="lnp">
-                    <label class="checkbox-img lnp" for="lnp"></label> 
+                    <input type="checkbox" name="other" value="lnp" id="lnp" data-price="3">
+                    <label class="checkbox-img lnp" for="lnp" ></label> 
                     
                 <h2>PICKUP OR DELIVERY</h2>
+                 <h4 id="otherCostTotal">Total : $ </h4>
                     <input type="radio" name="collection" value="pickup" id="pickup">
                     <label class="radio-img pickup" for="pickup"></label>
                     <input type="radio" name="collection" value="delivery" id="delivery">
