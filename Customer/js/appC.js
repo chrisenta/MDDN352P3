@@ -28,9 +28,7 @@ $("#submitCof").click(function(){
 
 coffee.size = $('input:radio[name=size]:checked').val();
 coffee.type = $('input:radio[name=type]:checked').val();
-coffee.extras = $('input:checkbox[name=extras]:checked').map(function(_, el) {
-    return $(el).val();
-}).get();
+coffee.extras = $('input:checkbox[name=extras]:checked').val();
 coffee.payment = $('input:radio[name=cc]:checked').val();
 coffee.collection = $('input:radio[name=collection]:checked').val();
 coffee.status = "Waiting in Line";
