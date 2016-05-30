@@ -24,6 +24,7 @@
             <p>Order No.: {{@key}}</p>
             <img src="images/{{type}}.png"> 
             <img src="images/{{size}}.png"> 
+            <img src="images/{{extras}}.png"> 
 
             {{#if soy}}
             <img src="images/{{soy}}.png"> 
@@ -108,21 +109,8 @@
             {{#each others}}
             <div>
             <p>Order No.: {{@key}}</p>
-            {{#if juices}}
-            <img src="images/{{juices}}.png"> 
-            {{else}}    
-            {{/if}}
-
-            {{#if water}}
-            <img src="images/{{water}}.png"> 
-            {{else}}    
-            {{/if}}
+            <img src="images/{{other}}.png"> 
             
-            {{#if softdrinks}}
-            <img src="images/{{softdrinks}}.png"> 
-            {{else}}    
-            {{/if}}
-
             <p><img src="images/{{collection}}.png"> </p>
             <p><em>Status: {{status}}</em></p>
 

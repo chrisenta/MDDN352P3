@@ -28,7 +28,9 @@ $("#submitCof").click(function(){
 
 coffee.size = $('input:radio[name=size]:checked').val();
 coffee.type = $('input:radio[name=type]:checked').val();
-coffee.extras = $('input:checkbox[name=extras]:checked').val();
+coffee.extras = $('input:checkbox[name=extras]:checked').map(function(_, el) {
+    return $(el).val();
+}).get();
 coffee.payment = $('input:radio[name=cc]:checked').val();
 coffee.collection = $('input:radio[name=collection]:checked').val();
 coffee.status = "Waiting in Line";
@@ -43,7 +45,9 @@ $("#submitTea").click(function(){
 	var tea = {
 	}
 
-tea.tea = $('input:checkbox[name=tea]:checked').val();
+tea.tea = $('input:checkbox[name=tea]:checked').map(function(_, el) {
+    return $(el).val();
+}).get();
 tea.collection = $('input:radio[name=collection]:checked').val();
 tea.status = "Waiting in Line";
 
@@ -55,15 +59,11 @@ $("#submitOther").click(function(){
 	var other = {
 	}
 
-other.juices = $('input:checkbox[name=juices]:checked').val();
-other.water = $('input:checkbox[name=water]:checked').val();
-other.softdrinks = $('input:checkbox[name=softdrinks]:checked').val();
+other.other = $('input:checkbox[name=other]:checked').map(function(_, el) {
+    return $(el).val();
+}).get();
 other.collection = $('input:radio[name=collection]:checked').val();
 other.status = "Waiting in Line";
-
-if(other.juices == null){delete other.juices}
-if(other.water == null){delete other.water}
-if(other.softdrinks == null){delete other.softdrinks}
 
 console.log(other);
 data.child("others").push(other);
