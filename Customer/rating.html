@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+<title>mobile app</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <link href="css/main.css" rel="stylesheet" media="all">
+<script src="app.js"></script>
+
+</head>
+<center>
+<img src="images/feedback.png" width="50%" height="50%">
+<br> <br>
+
+<p> While you wait.. fill out Te Papa's feedback form, we appreciate all your thoughts! </p>
+
+</center>
+<br> 
+
+
+
+
+ <div style="background:white" data-role="footer" style="text-align:center;">
+<p>RATE YOUR OVERALL EXPERIENCE OUT OF 5</p> 
+<input type="text" placeholder="type here..." id="Rating">
+<p>HOW HAPPY ARE YOU WITH TE PAPA'S SERVICES?</p>
+    <input type="text" placeholder="type here..." id="Comments">
+    <p>DO YOU HAVE ANY SUGGESTIONS TO MAKE YOUR EXPERIENCE MORE ENJOYABLE?</p>
+    <input type="text" placeholder="type here..." id="Suggestions">
+<button type="submit" id="submit" class="btn btn-success" style="background:white">SEND COMMENTS</button>
+    
+
+
+<div id="yield">
+
+</div>
+
+
+<script id="home-template" type="text/x-handlebars-template">
+
+  
+
+<div>
+{{#each exhibition}}
+<div>
+<p>RATING : {{Rating}}</p>
+<p>COMMENTS : {{Comments}} </p>
+<p>SUGGESTIONS : {{Suggestions}} </p>
+<hr>
+</div>
+{{/each}}
+</div>
+</script>
+
+
+<script src="app.js"></script>
+ 
+ 
+</html>

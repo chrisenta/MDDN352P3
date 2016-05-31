@@ -116,3 +116,5 @@ $('input').change(function(){
       	var otherPrice = calculateOtherPrice();
       	$('#otherCostTotal').text('Total Cost: $' + otherPrice);
  });$
+
+
