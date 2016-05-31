@@ -52,6 +52,7 @@ a {
 
 a:visited {
     color:#888
+    display: none;
 }
 
 canvas { 
@@ -141,9 +142,12 @@ canvas {
 .mastercard{background-image:url(http://i.imgur.com/SJbRQF7.png);}
 .paypal{background-image:url(../images/paypal.png);}
 
-.nav-tabs li a {font-size:20px;
 
- }
+/*Tabs overall*/
+
+.nav-tabs li a {
+    font-size:20px;
+}
 
 .nav-tabs{
   background-color:white;
@@ -163,17 +167,11 @@ canvas {
   background-color: #6b9a16!important;
     border: medium none;
     border-radius: 0;
-<<<<<<< HEAD
-    color:black;
-=======
     color:#981e8e;
->>>>>>> origin/gh-pages
 }
 
 
-
-
-
+/*Tabs on index2*/
 
 #tabbed_box {
     margin: 0px auto 0px auto;
@@ -214,6 +212,7 @@ ul.tabs li a {
     text-transform:uppercase;
     border:1px solid #464c54; 
 }
+
 ul.tabs li a:hover {
     background-color:#2f343a;
     border-color:#2f343a;
@@ -222,8 +221,8 @@ ul.tabs li a:hover {
     -o-transition: all .2s ease-in-out 0s;
     -ms-transition: all .2s ease-in-out 0s;
     transition: all .2s ease-in-out 0s;
-    
 }
+
 ul.tabs li a.active {
     background-image:url('images/tab_on.jpg');
     background-repeat:repeat-x;
@@ -242,6 +241,7 @@ ul.tabs li a.active {
     padding:10px;
     border:1px solid #464c54;   
 }
+
 #content_2, #content_3 { display:none; }
 
 .content p {
@@ -256,6 +256,7 @@ ul.tabs li a.active {
     margin:0px;
     padding:0px 20px 0px 20px;
 }
+
 .content ul li {
     list-style:none;
     border-bottom:1px solid #d6dde0;
@@ -263,10 +264,12 @@ ul.tabs li a.active {
     padding-bottom:15px;
     font-size:13px;
 }
+
 .content ul li a {
     text-decoration:none;
     color:#3e4346;
 }
+
 .content ul li a small {
     color:#8b959c;
     font-size:9px;
