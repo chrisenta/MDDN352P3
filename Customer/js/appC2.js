@@ -24,26 +24,35 @@
 
 
 
-$( function () {
-$( '.cropimage' ).each( function () {
-var image = $(this),
-cropwidth = image.attr('cropwidth'),
-cropheight = image.attr('cropheight'),
-results = image.next('.results' ),
-x = $('.cropX', results),
-y = $('.cropY', results),
-w = $('.cropW', results),
-h = $('.cropH', results),
-download = results.next('.download').find('a');
-
-image.cropbox( {width: cropwidth, height: cropheight, showControls: 'auto' } )
-.on('cropbox', function( event, results, img ) {
-x.text( results.cropX );
-y.text( results.cropY );
-w.text( results.cropW );
-h.text( results.cropH );
-download.attr('href', img.getDataURL());
+$('.cropimage').cropbox({
+  width: 500,
+  height: 500,
+  showControls: 'auto'
+}).on('cropbox', function(event, results, img) {
+  console.log(results);
 });
-} );
 
-} );
+
+
+     // When the document loads do everything inside here ...
+     $(document).ready(function(){
+        
+       // When a link is clicked
+       $("a.tab").click(function () {
+            
+           // switch all tabs off
+           $(".active").removeClass("active");
+            
+           // switch this tab on
+           $(this).addClass("active");
+            
+           // slide all elements with the class 'content' up
+           $(".content").slideUp();
+            
+           // Now figure out what the 'title' attribute value is and find the element with that id.  Then slide that down.
+           var content_show = $(this).attr("title");
+           $("#"+content_show).slideDown();
+          
+       });
+    
+     });

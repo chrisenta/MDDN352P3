@@ -7,12 +7,12 @@
     <link href="css/main.css" rel="stylesheet" media="all">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300,700italic' rel='stylesheet' type='text/css'>
     <script src="https://www.gstatic.com/firebasejs/3.0.0/firebase.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.5/hammer.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.6/jquery.mousewheel.js"></script>
-    <script src="js/jquery.cropbox.js"></script>
+    <script src="http://acornejo.github.io/jquery-cropbox/jquery.cropbox.js"></script>
+    <link type="text/css" media="screen" rel="stylesheet" href="http://acornejo.github.io/jquery-cropbox/jquery.cropbox.css">
 
 </head>
 
@@ -51,9 +51,30 @@
             </div>
         </script>
 
-<img class="cropimage" alt="" src="images/map1.jpg" cropwidth="400" cropheight="300"/>
-<div class="results"> <b>X</b>: <span class="cropX"></span> <b>Y</b>: <span class="cropY"></span> <b>W</b>: <span class="cropW"></span> <b>H</b>: <span class="cropH"></span> </div>
-<div class="download"> <a href="#" download="crop.png">Download</a> </div>
+
+
+        <div id="tabbed_box_1" class="tabbed_box">
+     <div class="tabbed_area">
+     
+        <ul class="tabs">
+            <li><a title="content_1" class="tab active">TE PAPA CAFE, LEVEL 1</a></li>
+            <li><a title="content_2" class="tab">WHERE YOU ARE, LEVEL 3</a></li>
+                      
+        </ul>   
+         
+        <div id="content_1" class="content">
+            <ul><img class="cropimage" alt="" src="images/map1.gif"/></ul>
+        </div>
+
+        <div id="content_2" class="content">
+            <ul><img class="cropimage" alt="" src="images/map3.gif"/></ul>
+        </div>
+     
+    </div>
+ 
+</div>
+
+
 
     </div>
 <script src="js/appC2.js"></script>
