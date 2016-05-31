@@ -63,7 +63,11 @@
             {{#each teas}}
             <div>
             <p>Order No.: {{@key}}</p>
-            <img src="images/{{tea}}.png"> 
+            
+           {{#each teas}}
+                <img src="images/{{this}}.png">
+            {{/each}}
+
             <p><img src="images/{{collection}}.png"> </p>
             <p><em>Status: {{status}}</em></p>
 
@@ -97,7 +101,10 @@
             {{#each others}}
             <div>
             <p>Order No.: {{@key}}</p>
-            <img src="images/{{other}}.png"> 
+            
+           {{#each other}}
+                <img src="images/{{this}}.png">
+            {{/each}}
             
             <p><img src="images/{{collection}}.png"> </p>
             <p><em>Status: {{status}}</em></p>
