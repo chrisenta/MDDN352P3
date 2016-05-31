@@ -7,10 +7,17 @@
     <link href="css/main.css" rel="stylesheet" media="all">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,300,700italic' rel='stylesheet' type='text/css'>
     <script src="https://www.gstatic.com/firebasejs/3.0.0/firebase.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+<<<<<<< HEAD
     <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+=======
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.5/hammer.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.6/jquery.mousewheel.js"></script>
+    <script src="http://acornejo.github.io/jquery-cropbox/jquery.cropbox.js"></script>
+    <link type="text/css" media="screen" rel="stylesheet" href="http://acornejo.github.io/jquery-cropbox/jquery.cropbox.css">
+>>>>>>> origin/gh-pages
 
 </head>
 
@@ -27,7 +34,7 @@
             <div>
             {{#each coffees}}
                 <div>
-                {{status}}
+                <span>{{status}}</span>
                 </div>
             {{/each}}
             </div>
@@ -35,7 +42,7 @@
             <div>
             {{#each teas}}
                 <div>
-                {{status}}
+                <span>{{status}}</span>
                 </div>
             {{/each}}
             </div>
@@ -43,13 +50,35 @@
             <div>
             {{#each others}}
                 <div>
-                {{status}}
+                <span>{{status}}</span>
                 </div>
             {{/each}}
             </div>
         </script>
+
+        <div id="tabbed_box_1" class="tabbed_box">
+            <div class="tabbed_area">
+                <ul class="tabs">
+                <li><a title="content_1" class="tab active">TE PAPA CAFE, LEVEL 1</a></li>
+                <li><a title="content_2" class="tab">WHERE YOU ARE, LEVEL 3</a></li>
+                </ul>   
+         
+                <div id="content_1" class="content">
+                    <ul><img class="cropimage" alt="" src="images/map1.gif"/></ul>
+                </div>
+
+                <div id="content_2" class="content">
+                    <ul><img class="cropimage" alt="" src="images/map3.gif"/></ul>
+                </div>
+
+            </div>
+        </div>
+        <hr><br>
+        <p><a href="index.html">ORDER ANOTHER DRINK</a></p>
     </div>
+    
 <script src="js/appC2.js"></script>
+<<<<<<< HEAD
 <hr>
 <br> <br>
 
@@ -59,5 +88,8 @@
 <img src="images/fb.png" width="20%"" height="20%"></a>
 
 </html>
+=======
+
+>>>>>>> origin/gh-pages
 </body>
 </html>

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<img src="images/barista.png">
+<img class="header" src="images/barista.png">
 <div>
     <h1>Coffee Orders</h1><hr>
     <div id="yield">
@@ -25,24 +25,11 @@
             <p>Order No.: {{@key}}</p>
             <img src="images/{{type}}.png"> 
             <img src="images/{{size}}.png"> 
-            <img src="images/{{extras}}.png"> 
 
-            {{#if soy}}
-            <img src="images/{{soy}}.png"> 
-            {{else}}    
-            {{/if}}
+           {{#each extras}}
+                <img src="images/{{this}}.png">
+            {{/each}}
 
-            {{#if sugar}}
-            <img src="images/{{sugar}}.png"> 
-            {{else}}    
-            {{/if}}
-
-            {{#if shots}}
-            <img src="images/{{shots}}.png"> 
-            {{else}}    
-            {{/if}}
-
-            <img src="images/{{payment}}.png"> 
             <p><img src="images/{{collection}}.png"> </p>
             <p><em>Status: {{status}}</em></p>
 
@@ -76,7 +63,11 @@
             {{#each teas}}
             <div>
             <p>Order No.: {{@key}}</p>
-            <img src="images/{{tea}}.png"> 
+            
+           {{#each teas}}
+                <img src="images/{{this}}.png">
+            {{/each}}
+
             <p><img src="images/{{collection}}.png"> </p>
             <p><em>Status: {{status}}</em></p>
 
@@ -110,7 +101,10 @@
             {{#each others}}
             <div>
             <p>Order No.: {{@key}}</p>
-            <img src="images/{{other}}.png"> 
+            
+           {{#each other}}
+                <img src="images/{{this}}.png">
+            {{/each}}
             
             <p><img src="images/{{collection}}.png"> </p>
             <p><em>Status: {{status}}</em></p>
