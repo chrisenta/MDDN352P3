@@ -45,13 +45,10 @@ $("#submitTea").click(function(){
 	var tea = {
 	}
 
-tea.tea = $('input:checkbox[name=tea]:checked').map(function(_, el) {
-    return $(el).val();
-}).get();
+tea.tea = $('input:radio[name=tea]:checked').val();
 tea.extras = $('input:checkbox[name=extras]:checked').map(function(_, el) {
     return $(el).val();
 }).get();
-
 tea.payment = $('input:radio[name=cc]:checked').val();
 tea.collection = $('input:radio[name=collection]:checked').val();
 tea.status = "Waiting in Line";
