@@ -48,6 +48,7 @@ $("#submitTea").click(function(){
 tea.tea = $('input:checkbox[name=tea]:checked').map(function(_, el) {
     return $(el).val();
 }).get();
+tea.payment = $('input:radio[name=cc]:checked').val();
 tea.collection = $('input:radio[name=collection]:checked').val();
 tea.status = "Waiting in Line";
 
@@ -62,6 +63,7 @@ $("#submitOther").click(function(){
 other.other = $('input:checkbox[name=other]:checked').map(function(_, el) {
     return $(el).val();
 }).get();
+other.payment = $('input:radio[name=cc]:checked').val();
 other.collection = $('input:radio[name=collection]:checked').val();
 other.status = "Waiting in Line";
 
