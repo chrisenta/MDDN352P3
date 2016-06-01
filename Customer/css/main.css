@@ -28,6 +28,10 @@ body {
         margin: none;
     }
 
+    .radio-img, .checkbox-img {
+    width: 130px !important;
+    height: 130px !important;
+
 }
 
 div {
