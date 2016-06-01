@@ -48,9 +48,16 @@ $("#submitTea").click(function(){
 tea.tea = $('input:checkbox[name=tea]:checked').map(function(_, el) {
     return $(el).val();
 }).get();
+tea.extras = $('input:checkbox[name=extras]:checked').map(function(_, el) {
+    return $(el).val();
+}).get();
+
 tea.payment = $('input:radio[name=cc]:checked').val();
 tea.collection = $('input:radio[name=collection]:checked').val();
 tea.status = "Waiting in Line";
+
+
+if(tea.extras == null){delete tea.extras}
 
 console.log(tea);
 data.child("teas").push(tea);

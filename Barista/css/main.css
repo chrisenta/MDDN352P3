@@ -4,10 +4,24 @@ body{
 	text-align: center;
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 1025px) {
  	body{
  		
  	}
+
+ 	div {
+ 		width: 100% !important;
+ 	}
+
+	.header {
+		width: auto !important;
+	}
+
+ 	img {
+	width: 200px !important;
+	height: 200px !important;
+	display: inline-block;
+	}
 }
 
 div {
