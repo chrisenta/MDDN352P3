@@ -79,34 +79,39 @@ data.child("others").push(other);
 function calculateTotalPrice() {
 	var sizePrice = $('input:radio[name=size]:checked').data('price');
 	var typePrice = $('input:radio[name=type]:checked').data('price');
+	var collectionPrice = $('input:radio[name=collection]:checked').data('price');
 	
 	var extraPrice = 0;
 	$('input:checkbox[name=extras]:checked').each(function () {
 	  extraPrice += $(this).data('price');
 	});
 
-	return sizePrice + typePrice + extraPrice;  // supposed to be the actual total price
+	return sizePrice + typePrice + collectionPrice + extraPrice;  // supposed to be the actual total price
 }
 
 function calculateTeaPrice() {
 
-	var teaPrice = 0;
-	$('input:checkbox[name=tea]:checked').each(function () {
-	  teaPrice += $(this).data('price');
+	var teaPrice = $('input:radio[name=tea]:checked').data('price');
+	var collectionPrice = $('input:radio[name=collection]:checked').data('price');
+
+	var extraPrice = 0;
+	$('input:checkbox[name=extras]:checked').each(function () {
+	  extraPrice += $(this).data('price');
 	});
 
-	return teaPrice;  // supposed to be the actual total price
+	return teaPrice + collectionPrice + extraPrice;  // supposed to be the actual total price
 }
 
 
 function calculateOtherPrice() {
 
+	var collectionPrice = $('input:radio[name=collection]:checked').data('price');
 	var otherPrice = 0;
 	$('input:checkbox[name=other]:checked').each(function () {
 	  otherPrice += $(this).data('price');
 	});
 
-	return otherPrice;  // supposed to be the actual total price
+	return collectionPrice + otherPrice;  // supposed to be the actual total price
 }
 //calculateTeaPrice
 
