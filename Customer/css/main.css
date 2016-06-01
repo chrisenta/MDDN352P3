@@ -7,7 +7,31 @@ body {
 
 @media all and (max-width: 800px) {
  	body{	
+
  	}
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    img.fb {
+        width: 70%;
+    }
+
+    img.class {
+        width: 20% !important;
+    }
+
+    div {
+        width: 100% !important; 
+        margin: none;
+    }
+
+    .radio-img, .checkbox-img {
+    width: 130px !important;
+    height: 130px !important;
+
 }
 
 div {
@@ -51,8 +75,11 @@ a {
 }
 
 a:visited {
-    color:#888
-    display: none;
+
+}
+
+a.unstyle {
+    background: #fff;
 }
 
 canvas { 
@@ -138,13 +165,29 @@ canvas {
 .milk{background-image:url(../images/MILK.jpg);}
 
 
-.pickup{background-image:url(../images/pickup.png);}
-.delivery{background-image:url(../images/delivery.png);}
+.pickup1{background-image:url(../images/pickup1.png);}
+.delivery1{background-image:url(../images/delivery1.png);}
 
-.visa{background-image:url(http://i.imgur.com/lXzJ1eB.png);}
-.mastercard{background-image:url(http://i.imgur.com/SJbRQF7.png);}
-.paypal{background-image:url(../images/paypal.png);}
+.visa1{background-image:url(../images/visa1.png);}
+.mastercard1{background-image:url(../images/mastercard1.png);}
+.paypal1{background-image:url(../images/paypal1.png);}
+.cash1{background-image:url(../images/cash1.png);}
 
+.pickup2{background-image:url(../images/pickup2.png);}
+.delivery2{background-image:url(../images/delivery2.png);}
+
+.visa2{background-image:url(../images/visa2.png);}
+.mastercard2{background-image:url(../images/mastercard2.png);}
+.paypal2{background-image:url(../images/paypal2.png);}
+.cash2{background-image:url(../images/cash2.png);}
+
+.pickup3{background-image:url(../images/pickup3.png);}
+.delivery3{background-image:url(../images/delivery3.png);}
+
+.visa3{background-image:url(../images/visa3.png);}
+.mastercard3{background-image:url(../images/mastercard3.png);}
+.paypal3{background-image:url(../images/paypal3.png);}
+.cash3{background-image:url(../images/cash3.png);}
 
 /*Tabs overall*/
 
