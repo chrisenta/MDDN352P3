@@ -5,10 +5,6 @@ body{
 }
 
 @media all and (max-width: 1025px) {
- 	body{
- 		
- 	}
-
  	div {
  		width: 100% !important;
  	}
@@ -45,7 +41,7 @@ button {
 img {
 	width: 150px;
 	height: 150px;
-	/*display: inline-block;*/
+	display: inline-block;
 }
 
 .header {
