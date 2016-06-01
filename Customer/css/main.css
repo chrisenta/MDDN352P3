@@ -7,7 +7,27 @@ body {
 
 @media all and (max-width: 800px) {
  	body{	
+
  	}
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    img.fb {
+        width: 70%;
+    }
+
+    img.class {
+        width: 20% !important;
+    }
+
+    div {
+        width: 100% !important; 
+        margin: none;
+    }
+
 }
 
 div {
@@ -51,8 +71,11 @@ a {
 }
 
 a:visited {
-    color:#888
-    display: none;
+
+}
+
+a.unstyle {
+    background: #fff;
 }
 
 canvas { 
