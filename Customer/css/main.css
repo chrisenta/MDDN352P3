@@ -62,6 +62,7 @@ canvas {
     border: 1px solid #ccc 
 }
 
+
 /* Adapted from http://jsfiddle.net/La8wQ/10/ */
 
 .radio-selector input, .checkbox-selector input {
@@ -134,6 +135,8 @@ canvas {
 .shot{background-image:url(../images/shot.png);}
 .sugar{background-image:url(../images/sugar.png);}
 .soy{background-image:url(../images/soy.png);}
+.milk{background-image:url(../images/MILK.jpg);}
+
 
 .pickup{background-image:url(../images/pickup.png);}
 .delivery{background-image:url(../images/delivery.png);}
